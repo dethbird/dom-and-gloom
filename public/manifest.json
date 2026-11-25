@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "DOM and Gloom",
+  "version": "0.1.0",
+  "description": "Give the current webpage a little cartoon physics.",
+  "minimum_chrome_version": "124",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_title": "DOM and Gloom", "default_popup": "popup.html", "default_icon": "icon.png" },
+  "icons": { "128": "icon.png" },
+  "commands": {
+    "activate-force": {
+      "suggested_key": { "default": "Alt+Shift+G" },
+      "description": "Activate the selected force"
+    },
+    "restore-page": {
+      "suggested_key": { "default": "Alt+Shift+U" },
+      "description": "Restore the page"
+    }
+  }
+}

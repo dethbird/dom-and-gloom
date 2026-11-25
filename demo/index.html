@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outpost Supply</title>
+  <link rel="stylesheet" href="./store.css">
+  <script src="./store.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Outpost Supply home"><span aria-hidden="true">◆</span> OUTPOST<span class="supply"> SUPPLY</span></a>
+    <nav aria-label="Shop">
+      <a href="#gear">Gear</a>
+      <a href="#weekender">Collections</a>
+      <a href="#footer">About</a>
+    </nav>
+    <button class="cart" type="button" aria-label="View bag" aria-expanded="false">Bag <span id="cart-count">0</span></button>
+    <div id="cart-summary" hidden>Your bag is empty.</div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Take the<br>long way.</h1>
+        <p>Hardwearing essentials for wherever the day takes you.</p>
+        <a class="button" role="button" href="#gear">Shop trail gear <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-media"><img src="./images/trail.webp" width="1320" height="880" alt="Trail gear arranged on alpine rock"></div>
+    </section>
+
+    <section class="catalog" id="gear" aria-labelledby="gear-title">
+      <div class="section-heading">
+        <h2 id="gear-title">Trail favorites</h2>
+        <button class="text-button" id="more" type="button">Show more <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="products" id="products">
+        <article class="product">
+          <a class="product-photo" href="#ridgepack" aria-label="Ridgepack 22"><img src="./images/pack.webp" width="590" height="887" alt="Khaki trail daypack"><span>Best seller</span></a>
+          <div class="product-info" id="ridgepack"><h3><a href="#ridgepack">Ridgepack 22</a></h3><span>$88</span></div>
+          <button type="button" class="add">Add to bag</button>
+        </article>
+        <article class="product">
+          <a class="product-photo bottle" href="#bottle" aria-label="Summit Bottle"><img src="./images/bottle.webp" width="590" height="887" alt="Pine green insulated bottle"></a>
+          <div class="product-info" id="bottle"><h3><a href="#bottle">Summit Bottle</a></h3><span>$32</span></div>
+          <button type="button" class="add">Add to bag</button>
+        </article>
+        <article class="product">
+          <div class="product-photo blanket"><img src="./images/blanket.webp" width="590" height="887" alt="Rolled burnt-orange camp blanket"></div>
+          <div class="product-info" id="blanket"><h3><a href="#blanket">Fireside Roll</a></h3><span>$65</span></div>
+          <input type="button" class="add" value="Add to bag">
+        </article>
+      </div>
+      <template id="extra-product">
+        <article class="product">
+          <a class="product-photo" href="#weekender"><img src="./images/trail.webp" width="1320" height="880" alt="Daypack and trail accessories"></a>
+          <div class="product-info"><h3><a href="#weekender">Ridgeline Kit</a></h3><span>$140</span></div>
+          <button type="button" class="add">Add to bag</button>
+        </article>
+      </template>
+    </section>
+
+    <section class="promo" id="weekender">
+      <img src="./images/trail.webp" width="1320" height="880" loading="lazy" alt="Gear on rocky terrain">
+      <div><h2>The weekend kit</h2><p>Pack light. Stay out longer.</p><a class="button" role="button" href="#gear">Explore the collection ↗</a></div>
+    </section>
+  </main>
+  <footer id="footer"><a href="#">Outpost Supply</a><a href="#gear">Back to gear ↑</a></footer>
+</body>
+</html>

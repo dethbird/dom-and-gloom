@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOM and Gloom</title>
+</head>
+<body>
+  <main>
+    <header class="brand">
+      <img src="/icon.png" width="42" height="42" alt="">
+      <h1>DOM <span>and</span> Gloom</h1>
+    </header>
+    <fieldset id="preferences" disabled>
+      <label class="enable" for="enabled">
+        <span>Extension <strong id="enabled-state">On</strong></span>
+        <input id="enabled" type="checkbox" role="switch" aria-label="Enable DOM and Gloom">
+      </label>
+      <div class="controls">
+        <label for="force">Force</label>
+        <select id="force"></select>
+        <label class="range-label" for="intensity">Intensity <output id="intensity-value" for="intensity"></output></label>
+        <input id="intensity" type="range" min="0" max="100">
+        <label class="range-label" for="stagger">Stagger <output id="stagger-value" for="stagger"></output></label>
+        <input id="stagger" type="range" min="0" max="100" aria-describedby="stagger-help">
+        <div class="range-hints" id="stagger-help"><span>All at once</span><span>Spread out</span></div>
+      </div>
+    </fieldset>
+
+    <section class="shortcuts" aria-labelledby="shortcuts-heading">
+      <h2 id="shortcuts-heading">Keyboard shortcuts</h2>
+      <div class="shortcut"><span>Activate force</span><span id="activate-keys">—</span></div>
+      <div class="shortcut"><span>Restore page</span><span id="restore-keys">—</span></div>
+      <a id="shortcut-settings" href="chrome://extensions/shortcuts">Edit shortcuts <span aria-hidden="true">↗</span></a>
+    </section>
+    <p id="status" role="status" hidden></p>
+  </main>
+  <script type="module" src="/src/popup/index.ts"></script>
+</body>
+</html>
